@@ -1,0 +1,50 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+<div class="container">
+  <div class="center">
+    <div class="text-center">
+      <img src="assets/images/logo/ceiba-icono.png" alt="">
+      <h3>Authentication Ceiba</h3>
+    </div>
+    <form [formGroup]="singupForm" (ngSubmit)="login(singupForm.value)">
+      <label for="">Email: </label>
+      <input
+        type="text"
+        id="login__email"
+        placeholder="exampple@gmail.com"
+        class="control"
+        formControlName="email"
+      >
+      <div
+        *ngIf="singupForm.get('email').hasError('required')"
+        class="text-red" id="login__email-error">
+        Email is required
+      </div>
+      <label for="">Password: </label>
+      <input
+        type="password"
+        id="login__password"
+        placeholder="*********"
+        class="control"
+        formControlName="password"
+      >
+      <div
+        *ngIf="singupForm.get('password').hasError('required')"
+        class="text-red" id="login__password-error">
+        Password is required
+      </div>
+      <div
+        *ngIf="singupForm.get('password').hasError('required') || singupForm.get('password').errors?.minlength"
+        class="text-red" id="login__password-error">
+        The minimum of characters will be 8
+      </div>
+      <div class="text-center">
+        <button type="submit" id="login__btn-login">Login</button>
+        <!-- <button type="submit" value="Ingresar">Register</button> -->
+      </div>
+      <div *ngIf="error !== ''" class="text-red text-center">{{ error | uppercase }}</div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/h8k-design/lib/index.scss';
+
+:root {
+}
+
+body {
+  background: linear-gradient(to bottom, #004951 0%, #f3f7f7 100%);
+}
+
+.text-red {
+  color: red;
+  font-size: smaller;
+}

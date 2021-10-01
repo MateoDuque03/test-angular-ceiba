@@ -1,0 +1,58 @@
+.container-list {
+  width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.img-list {
+  border-radius: 65px;
+  width: 50%;
+}
+
+.width-input {
+  width: 97%;
+}
+
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 500px) {
+  .container-list {
+    width: 80%;
+  }
+
+  .table-list thead {
+    display: none;
+  }
+
+  .img-list {
+    width: 15%;
+    margin-top: 5px;
+  }
+
+  .table-list,
+  .table-list body,
+  .table-list tr,
+  .table-list td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-list tr {
+    margin-bottom: 15px;
+  }
+
+  .table-list td {
+    text-align: right;
+    padding-left: 10%;
+    position: relative;
+  }
+
+  button {
+    margin: 0px;
+    margin-top: 8px;
+    min-height: 30px;
+  }
+}

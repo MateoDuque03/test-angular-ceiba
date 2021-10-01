@@ -1,0 +1,39 @@
+.container {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  margin: auto;
+  width: 20%;
+  padding: 30px;
+  vertical-align: auto;
+  background: linear-gradient(to bottom, #f3f7f7 0%, #004951 100%);
+  color: #fff;
+  box-shadow: 7px 13px 30px #000;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #fff;
+}
+
+.control {
+  width: 100%;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  .center {
+    width: 60%;
+  }
+
+  img {
+    width: 50%;
+  }
+}

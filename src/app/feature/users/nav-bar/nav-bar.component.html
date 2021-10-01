@@ -1,0 +1,19 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
+-->
+<div class="ma-20">
+  <section class="card-text flex justify-content-around">
+      <div class="">
+        <a routerLink="create" class="hover" id="nav-bar__btn-create-user"><button class="small outlined tile">Create User</button></a>
+        <a routerLink="list" class="hover" id="nav-bar__btn-list-user"><button class="small outlined tile">List User</button></a>
+      </div>
+      <div class="">
+        <a (click)="logout()" id="nav-bar__btn-logout">
+          <button class="text">
+            <img src="assets/images/logo/logout.png" alt="Cerrar Sesión" class="w-50 mt-10" title="Logout">
+          </button>
+        </a>
+      </div>
+  </section>
+</div>
